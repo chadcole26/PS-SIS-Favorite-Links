@@ -2,7 +2,7 @@
 <html>
 <!-- non framed -->
 <head>
-<title>Favorite Pages</title>
+<title>Favorite Links</title>
 ~[wc:commonscripts]
 <link href="/images/css/screen.css" rel="stylesheet" media="screen">
 <link href="/images/css/print.css" rel="stylesheet" media="print">
@@ -15,14 +15,14 @@
 
 ~[wc:admin_header_css]<!-- breadcrumb start --><a href="/admin/home.html" target="_top">~[text:psx.html.admin.userprefinterface.start_page]</a> &gt; <a href="/admin/userpreferences.html?frn=~(userfrn)">~[text]psx.html.admin.userprefinterface.personalize_,param:~[x:username][/text]</a> &gt; Favorite Pages<!-- breadcrumb end -->~[wc:admin_navigation_css]
 
-<h1>Favorite Pages Setup</h1><!-- start of content and bounding box -->
+<h1>Favorite Links Setup</h1><!-- start of content and bounding box -->
 	~[if.~(gpv.changesSaved)=true]
 	<div class="feedback-confirm" style="width: 600px">~[text:psx.common.changes_recorded]</div>
 	[/if]
 
 <div class="box-round" style="width: 600px">
 
-	<h2>Enable/Disable Favorite Page Links</h2>
+	<h2>Enable/Disable Favorite Links</h2>
 	<div id="faveEnable">
 		<table id="faveEnableTable">
 		    <tr>
@@ -34,191 +34,134 @@
 
 
 
-	<h2>Select Favorite Page Links</h2>
+	<h2>Select Favorite Links</h2>
 
 	<div id="faveSetup">
-	<table id="faveSetupTable" class="grid">
-		<tr>
-			<td style="background-color: rgb(163, 191, 204);" align="left" colspan="2"><strong>Setup</strong></td>
-		<tr>
-			<td class="bold">DCID of Favorite Student</td>
-			<td><input type="text" value="" name="[pref]fave_stuDCID-U~[x:userid]" size="8"></td>
-		</tr>
-		<tr>
-			<td class="bold">DCID of Favorite Teacher</td>
-			<td><input type="text" value="" name="[pref]fave_userDCID-U~[x:userid]" size="8"></td>
-		</tr>
-
-		<tr>
-			<td style="background-color: rgb(163, 191, 204);" align="left"><strong>Feature</strong></td>
-			<td style="background-color: rgb(163, 191, 204);" align="center"><strong>Enabled?</strong></td>
-		</tr>
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Setup & Customization</i></td>
-			<td align="center"style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_customization-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Custom Page Manager</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_cpm-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Custom Student Screens</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custom_screens-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;District Info</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_district_info-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Extensions Manager</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_extensions-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Localization</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_localization-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Page & Data Management</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_pdmanage-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Plugin Management</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_plugins-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Years & Terms Setup</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_years_terms-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Security - <i>(Must be checked to display Security options)</i></td>
-			<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_security-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Field Level Security</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_field_level-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Group Security</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_groups-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Roles Administration</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_roles-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Grading - <i>(Must be checked to display Grading options)</i></td>
-			<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_grading-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Final Grade Setup</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_finalgrade_setup-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;GPA Calculations</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_gpa_calc-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Grade Scale Setup</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_grade_scales-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;PowerTeacher Pro Settings</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_ptp-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Standards Setup</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_standards-U~[x:userid]"></td>
-		</tr>
-<!-- Begin Solution Engineer Specific for Students
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Student Pages - <i>(Must be checked to display Student Pages options)</i></td>
-			<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_student_pages-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Bell Schedule</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_bell_schedule-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Counselor Dashboard</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_counselor_dashboard-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Historical Grades</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_historical_grades-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Modify Schedule</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_modify_schedule-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Staff Pages - <i>(Must be checked to display Staff Pages options)</i></td>
-			<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_staff_pages-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Schedule - Current</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_current_schedule-U~[x:userid]"></td>
-		</tr>
-End Solution Engineer Specific for Students -->
-<!-- Begin Alernate Solution Engineer Specific for Students
-		<tr>
-			<td>&nbsp;&nbsp;Schedule - Matrix</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_matrix_schedule-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;Staff Record</td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_staff_record-U~[x:userid]"></td>
-		</tr>
-End Alernate Solution Engineer Specific for Students -->
-<!-- Begin Solution Engineer Specific for Staff
-		<tr>
-			<td class="bold" style="background-color: rgb(215, 215, 215);">Custom Links - (Display Name/URL)</i></td>
-			<td align="center"style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_customlinks-U~[x:userid]"></td>
-		</tr>
-End Solution Engineer Specific for Staff -->
-		<tr>
-			<td colspan="2"><i>Users can enter custom links to non-student/staff pages in this area. For the link to work, you'll need to copy the part of the url after the server name (everything after the .com)</i></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink1dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink1url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink1-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink2dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink2url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink2-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink3dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink3url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink3-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink4dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink4url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink4-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink5dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink5url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink5-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink6dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink6url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink6-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink7dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink7url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink7-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink8dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink8url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink8-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink9dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink9url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink9-U~[x:userid]"></td>
-		</tr>
-		<tr>
-			<td><input type="text" value="" name="[pref]fave_custlink10dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink10url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
-			<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink10-U~[x:userid]"></td>
-		</tr>
-	</table>
+		<table id="faveSetupTable" class="grid">
+			<tr>
+				<td style="background-color: rgb(163, 191, 204);" align="left"><strong>Feature</strong></td>
+				<td style="background-color: rgb(163, 191, 204);" align="center"><strong>Enabled?</strong></td>
+			</tr>
+			<tr>
+				<td class="bold" style="background-color: rgb(215, 215, 215);">Setup & Customization</i></td>
+				<td align="center"style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_customization-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Custom Page Manager</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_cpm-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Custom Student Screens</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custom_screens-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;District Info</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_district_info-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Extensions Manager</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_extensions-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Localization</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_localization-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Page & Data Management</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_pdmanage-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Plugin Management</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_plugins-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Years & Terms Setup</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_years_terms-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td class="bold" style="background-color: rgb(215, 215, 215);">Security - <i>(Must be checked to display Security options)</i></td>
+				<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_security-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Field Level Security</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_field_level-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Group Security</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_groups-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Roles Administration</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_roles-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td class="bold" style="background-color: rgb(215, 215, 215);">Grading - <i>(Must be checked to display Grading options)</i></td>
+				<td align="center" style="background-color: rgb(215, 215, 215);"><input type="checkbox" value="1" name="[pref]fave_grading-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Final Grade Setup</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_finalgrade_setup-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;GPA Calculations</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_gpa_calc-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Grade Scale Setup</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_grade_scales-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;PowerTeacher Pro Settings</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_ptp-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Standards Setup</td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_standards-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><i>Users can enter custom links to non-student/staff pages in this area. For the link to work, you'll need to copy the part of the url after the server name (everything after the .com)</i></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink1dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink1url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink1-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink2dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink2url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink2-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink3dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink3url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink3-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink4dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink4url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink4-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink5dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink5url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink5-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink6dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink6url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink6-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink7dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink7url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink7-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink8dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink8url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink8-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink9dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink9url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink9-U~[x:userid]"></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="" name="[pref]fave_custlink10dn-U~[x:userid]" size="20" placeholder="Menu Label"> / <input type="text" value="" name="[pref]fave_custlink10url-U~[x:userid]" size="40" placeholder="URL (/admin/page.html)"></td>
+				<td align="center"><input type="checkbox" value="1" name="[pref]fave_custlink10-U~[x:userid]"></td>
+			</tr>
+		</table>
 
 <!-- 
 

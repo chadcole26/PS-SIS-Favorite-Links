@@ -18,7 +18,7 @@ $j(document).ready(function() {
     <!-- The following SELECT statement opens the selected page in a new tab -->
     <!-- <select id="thepicklist" onchange="window.open(this.options[this.selectedIndex].value);"> -->
         <option>Favorite Links</option>
- ~[if#CheckSE1.prefuser.fave_customization=1]
+ ~[if#CheckFLP1.prefuser.fave_customization=1]
         <optgroup label="Customization">
               ~[if#CheckC1.prefuser.fave_cpm=1]
             <option style="padding-left: -10px;"  value="/admin/customization/home.html">Custom Page Manager</option>
@@ -45,8 +45,8 @@ $j(document).ready(function() {
             <option value="/admin/years/home.html">Years & Terms</option>
             [/if#CheckC8]
         </optgroup>
-[/if#CheckSE1]
-~[if#CheckSE2.prefuser.fave_security=1]
+[/if#CheckFLP1]
+~[if#CheckFLP2.prefuser.fave_security=1]
         <optgroup label="Security">
              ~[if#CheckS1.prefuser.fave_field_level=1]
             <option value="/admin/fieldlevelsecurity/getFieldLevelSecurityTableData.action">Field Level Security</option>
@@ -58,8 +58,8 @@ $j(document).ready(function() {
             <option value="/admin/roles/listRoles.action?moduleId=41">Roles Administration</option>
             [/if#CheckS3]
         </optgroup>
-[/if#CheckSE2]
-~[if#CheckSE3.prefuser.fave_grading=1]
+[/if#CheckFLP2]
+~[if#CheckFLP3.prefuser.fave_grading=1]
         <optgroup label="Grading">
              ~[if#CheckG1.prefuser.fave_finalgrade_setup=1]
             <option value="/admin/tech/pgfinalgradesetup/home.html">Final Grade Setup</option>
@@ -78,44 +78,8 @@ $j(document).ready(function() {
             <option value="/admin/standards/listall.html">Standards Setup</option>
             [/if#CheckG5]
         </optgroup>
-[/if#CheckSE3]
-<!-- SE Student
-~[if#CheckSE4.prefuser.fave_student_pages=1]
-        <optgroup label="Student Pages">
-            <!-- EXAMPLES FOR A SPECIFIC STUDENT
-            <option value="/admin/students/home.html?frn=00128742&schedulerequestyearid=2800&ac=suv;lsp=scheduleplusreq.html">Modify Schedule</option>
-            <option value="/admin/students/home.html?frn=00128742&ac=suv;lsp=cd4.html">Counselor Dashboard</option>
-            <option value="/admin/students/home.html?frn=00128742&ac=suv;lsp=previousgrades.html">Grades</option>
-            -->
-            ~[if#CheckSP1.prefuser.fave_bell_schedule=1]
-            <option value="/admin/students/home.html?frn=001~[displayprefuser:fave_stuDCID]&ac=suv;lsp=schedule.html">Bell Schedule</option>
-            [/if#CheckSP1]
-            ~[if#CheckSP2.prefuser.fave_counselor_dashboard=1]
-            <option value="/admin/students/home.html?frn=001~[displayprefuser:fave_stuDCID]&ac=suv;lsp=cd4.html">Counselor Dashboard</option>
-            [/if#CheckSP2]
-             ~[if#CheckSP3.prefuser.fave_historical_grades=1]
-            <option value="/admin/students/home.html?frn=001~[displayprefuser:fave_stuDCID]&ac=suv;lsp=previousgrades.html">Historical Grades</option>
-            [/if#CheckSP3]
-            ~[if#CheckSP4.prefuser.fave_modify_schedule=1]
-            <option value="/admin/students/home.html?frn=001~[displayprefuser:fave_stuDCID]&schedulerequestyearid=~(curyearid)00&ac=suv;lsp=scheduleplusreq.html">Modify Schedule</option>
-            [/if#CheckSP4]
-        </optgroup>
-[/if#CheckSE4] -->
-<!-- SE Staff 
-~[if#CheckSE5.prefuser.fave_staff_pages=1]
-        <optgroup label="Staff Pages">
-             ~[if#CheckST1.prefuser.fave_current_schedule=1]
-            <option value="/admin/faculty/home.html?frn=005~[displayprefuser:fave_userDCID]&ac=suv;lsp=teacherschedules/sched.html">Current Schedule</option>
-            [/if#CheckST1]
-            ~[if#CheckST2.prefuser.fave_matrix_schedule=1]
-            <option value="/admin/faculty/home.html?frn=005~[displayprefuser:fave_userDCID]&ac=suv;lsp=schedulematrix.html">Schedule Matrix</option>
-            [/if#CheckST2]
-            ~[if#CheckST3.prefuser.fave_staff_record=1]
-            <option value="/admin/faculty/home.html?defaultpage=ac&x=17&y=14&selectteacher=id%3D~[displayprefuser:fave_userDCID]&teachersonly=All">Staff Record</option>
-            [/if#CheckST3]
-        </optgroup>
-[/if#CheckSE5] -->
-~[if#CheckSE6.prefuser.fave_customlinks=1]
+[/if#CheckFLP3]
+~[if#CheckFLP4.prefuser.fave_customlinks=1]
          <optgroup label="Custom Links">
          ~[if#CheckCL1.prefuser.fave_custlink1=1]
             <option value="~[displayprefuser:fave_custlink1url]">~[displayprefuser:fave_custlink1dn]</option>
@@ -148,10 +112,10 @@ $j(document).ready(function() {
             <option value="~[displayprefuser:fave_custlink10url]">~[displayprefuser:fave_custlink10dn]</option>
          [/if#CheckCL10]
          </optgroup>
-         [/if#CheckSE6]
+[/if#CheckFLP4]
 
         <optgroup style="color: green;" label="- - - - - - - - - - - - - - -">
-            <option value="/admin/favorites.html">Favorites Preferences</option>
+            <option value="/admin/favorites.html">Setup &amp; Preferences</option>
         </optgroup>
     </select>
 </div>

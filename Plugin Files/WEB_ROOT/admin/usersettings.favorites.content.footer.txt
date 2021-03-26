@@ -1,0 +1,6 @@
+<!-- Favorite Pages Plugin - Script to add new menu item -->
+<script type="text/javascript">
+    $j(document).ready( function() {
+	$j('#user_settings_form .fluid-multi-form').append('<h2>Favorites Menu</h2><div class="fluid-form"><div><div><input type="checkbox" id="faveToggle" name="[pref]fave_enabled-U~[x:userid]" value="1" /><label for="new_look">Enable Favorite Links</label><a class="button" href="/admin/favorites.html">Define Favorites</a></div></div></div>');
+    });
+</script>

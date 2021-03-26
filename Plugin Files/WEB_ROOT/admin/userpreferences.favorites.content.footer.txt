@@ -1,0 +1,6 @@
+<!-- Favorite Pages Plugin - Script to add new menu item -->
+<script type="text/javascript">
+    $j(document).ready( function() {
+	$j('.box-round > table').append('<tr bgcolor="#edf3fe"><td><a href="/admin/favorites.html">Favorite Pages</a></td><td>Select what information should be shown in the Favorite Pages menu on your home page.</td></tr>');
+    });
+</script>

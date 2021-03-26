@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+	xmlns="http://plugin.powerschool.pearson.com" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	description="Quick Links to common Admin Pages" 
+	name="PS SIS Admin Quick Links" 
+	version="1.0"
+	xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd">
+	<publisher name="Jason Springel">
+		<contact email="Jason.Springel@powerschool.com"/>
+	</publisher>
+</plugin>

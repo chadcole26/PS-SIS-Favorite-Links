@@ -55,7 +55,7 @@ $j(document).ready(function() {
             <option value="/admin/groups/">Group Security</option>
             [/if#CheckS2]
             ~[if#CheckS3.prefuser.fave_roles=1]
-            <option value="/admin/roles/listRoles.action?moduleId=41">Roles Administration</option>
+            <option value="/admin/roles/listModules.action">Roles Administration</option>
             [/if#CheckS3]
         </optgroup>
 [/if#CheckFLP2]

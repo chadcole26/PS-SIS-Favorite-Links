@@ -2,7 +2,7 @@
 <plugin 
 	xmlns="http://plugin.powerschool.pearson.com" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	description="Quick Link Menu to Favorite Admin Pages" 
+	description="Add a menu of favorite page links to the breadcrumb bar" 
 	name="Favorite Links for PS SIS Admin" 
 	version="1.0"
 	xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd">

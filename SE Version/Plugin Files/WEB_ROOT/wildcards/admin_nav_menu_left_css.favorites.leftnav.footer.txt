@@ -1,0 +1,121 @@
+~[if#CheckFaveOn.prefuser.fave_enabled=1]
+<script>
+$j(document).ready(function() {
+
+    ~[if#newexp.is.new.look.enabled] 
+        $j(".pds-app-header-bar-center").css("flex","1 30 100%");
+    [/if#newexp]
+
+    $j('#tools2').prepend('<li id="demopicklist" class="pds-app-action"></li>');
+    $j('#thepicklist').appendTo('#demopicklist');
+});
+</script>
+[/if#CheckFaveOn]
+
+<div style="display:none">
+    <!-- The following SELECT statement opens the selected page in the existing window/tab -->
+    <select id="thepicklist" onchange="location = this.value;">
+    <!-- The following SELECT statement opens the selected page in a new tab -->
+    <!-- <select id="thepicklist" onchange="window.open(this.options[this.selectedIndex].value);"> -->
+        <option>Favorite Links</option>
+ ~[if#CheckFLP1.prefuser.fave_customization=1]
+        <optgroup label="Customization">
+              ~[if#CheckC1.prefuser.fave_cpm=1]
+            <option style="padding-left: -10px;"  value="/admin/customization/home.html">Custom Page Manager</option>
+            [/if#CheckC1]
+             ~[if#CheckC2.prefuser.fave_custom_screens=1]
+            <option style="padding-left: -10px;"  value="/admin/tech/customstudentscreens/home.html">Custom Student Screens</option>
+            [/if#CheckC2]
+             ~[if#CheckC3.prefuser.fave_district_info=1]
+            <option value="/admin/districtinfo">District Info</option>
+            [/if#CheckC3]
+            ~[if#CheckC4.prefuser.fave_extensions=1]
+            <option value="/admin/extendedschema/manageExtendedSchema.action">Extensions Management</option>
+            [/if#CheckC4]
+            ~[if#CheckC5.prefuser.fave_localization=1]
+            <option value="/admin/viewBatchTranslation.action">Localization</option>
+            [/if#CheckC5]
+             ~[if#CheckC6.prefuser.fave_pdmanage=1]
+            <option value="/admin/tech/pageanddatamanagement.html">Page & Data Management</option>
+            [/if#CheckC6]
+             ~[if#CheckC7.prefuser.fave_plugins=1]
+            <option value="/admin/pluginconsole/plugInConsole.action">Plugin Management</option>
+            [/if#CheckC7]
+             ~[if#CheckC8.prefuser.fave_years_terms=1]
+            <option value="/admin/years/home.html">Years & Terms</option>
+            [/if#CheckC8]
+        </optgroup>
+[/if#CheckFLP1]
+~[if#CheckFLP2.prefuser.fave_security=1]
+        <optgroup label="Security">
+             ~[if#CheckS1.prefuser.fave_field_level=1]
+            <option value="/admin/fieldlevelsecurity/getFieldLevelSecurityTableData.action">Field Level Security</option>
+            [/if#CheckS1]
+            ~[if#CheckS2.prefuser.fave_groups=1]
+            <option value="/admin/groups/">Group Security</option>
+            [/if#CheckS2]
+            ~[if#CheckS3.prefuser.fave_roles=1]
+            <option value="/admin/roles/listModules.action">Roles Administration</option>
+            [/if#CheckS3]
+        </optgroup>
+[/if#CheckFLP2]
+~[if#CheckFLP3.prefuser.fave_grading=1]
+        <optgroup label="Grading">
+             ~[if#CheckG1.prefuser.fave_finalgrade_setup=1]
+            <option value="/admin/tech/pgfinalgradesetup/home.html">Final Grade Setup</option>
+            [/if#CheckG1]
+             ~[if#CheckG2.prefuser.fave_gpa_calc=1]
+            <option value="/admin/schoolsetup/gpa/listcalculationmethods.html">GPA Calc Setup</option>
+            [/if#CheckG2]
+             ~[if#CheckG3.prefuser.fave_grade_scales=1]
+            <option value="/admin/marks/home.html">Grade Scale Setup</option>
+            [/if#CheckG3]
+            ~[if#CheckG4.prefuser.fave_ptp=1]
+            ~[if.is.a.school]<option value="/admin/schoolsetup/gradingsetup/home.html">PTP Settings (School)</option>[/if]
+            ~[if.district.office]<option value="/admin/district/gradingsetup/home.html">PTP Settings (District)</option>[/if]
+            [/if#CheckG4]
+            ~[if#CheckG5.prefuser.fave_standards=1]
+            <option value="/admin/standards/listall.html">Standards Setup</option>
+            [/if#CheckG5]
+        </optgroup>
+[/if#CheckFLP3]
+~[if#CheckFLP4.prefuser.fave_customlinks=1]
+         <optgroup label="Custom Links">
+         ~[if#CheckCL1.prefuser.fave_custlink1=1]
+            <option value="~[displayprefuser:fave_custlink1url]">~[displayprefuser:fave_custlink1dn]</option>
+         [/if#CheckCL1]
+         ~[if#CheckCL2.prefuser.fave_custlink2=1]
+            <option value="~[displayprefuser:fave_custlink2url]">~[displayprefuser:fave_custlink2dn]</option>
+         [/if#CheckCL2]
+         ~[if#CheckCL3.prefuser.fave_custlink3=1]
+            <option value="~[displayprefuser:fave_custlink3url]">~[displayprefuser:fave_custlink3dn]</option>
+         [/if#CheckCL3]
+         ~[if#CheckCL4.prefuser.fave_custlink4=1]
+            <option value="~[displayprefuser:fave_custlink4url]">~[displayprefuser:fave_custlink4dn]</option>
+         [/if#CheckCL4]
+         ~[if#CheckCL5.prefuser.fave_custlink5=1]
+            <option value="~[displayprefuser:fave_custlink5url]">~[displayprefuser:fave_custlink5dn]</option>
+         [/if#CheckCL5]
+         ~[if#CheckCL6.prefuser.fave_custlink6=1]
+            <option value="~[displayprefuser:fave_custlink6url]">~[displayprefuser:fave_custlink6dn]</option>
+         [/if#CheckCL6]
+         ~[if#CheckCL7.prefuser.fave_custlink7=1]
+            <option value="~[displayprefuser:fave_custlink7url]">~[displayprefuser:fave_custlink7dn]</option>
+         [/if#CheckCL7]
+         ~[if#CheckCL8.prefuser.fave_custlink8=1]
+            <option value="~[displayprefuser:fave_custlink8url]">~[displayprefuser:fave_custlink8dn]</option>
+         [/if#CheckCL8]
+         ~[if#CheckCL9.prefuser.fave_custlink9=1]
+            <option value="~[displayprefuser:fave_custlink9url]">~[displayprefuser:fave_custlink9dn]</option>
+         [/if#CheckCL9]
+         ~[if#CheckCL10.prefuser.fave_custlink10=1]
+            <option value="~[displayprefuser:fave_custlink10url]">~[displayprefuser:fave_custlink10dn]</option>
+         [/if#CheckCL10]
+         </optgroup>
+[/if#CheckFLP4]
+
+        <optgroup style="color: green;" label="- - - - - - - - - - - - - - -">
+            <option value="/admin/favorites.html">Setup &amp; Preferences</option>
+        </optgroup>
+    </select>
+</div>

@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	description="Add a menu of favorite page links to the breadcrumb bar" 
 	name="Favorite Links for PS SIS Admin" 
-	version="1.0"
+	version="1.1"
 	xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd">
 	<publisher name="Jason Springel and Chad Cole">
 		<contact email="Jason.Springel@powerschool.com"/>

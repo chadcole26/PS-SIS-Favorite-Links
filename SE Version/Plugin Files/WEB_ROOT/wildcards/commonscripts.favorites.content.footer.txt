@@ -1,10 +1,13 @@
 ~[if#CheckFaveOn.prefuser.fave_enabled=1]
 	<script>
 		$j(document).ready(function() {
+			/* NEW LOOK IS NOW STANDARD, DON'T NEED TO DO THIS CHECK
 			~[if#newexp.is.new.look.enabled] 
 				$j(".pds-app-header-bar-center").css("flex","1 30 100%");
 			[/if#newexp]
-
+			*/
+			
+			$j(".pds-app-header-bar-center").css("flex","1 30 100%");
 			$j('#tools2').prepend('<li id="demopicklist" class="pds-app-action"></li>');
 			$j('#thepicklist').appendTo('#demopicklist');
 		});
